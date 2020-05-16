@@ -4,8 +4,8 @@ import pickle
 from keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.models import load_model
 
-MODEL_PATH = "model.h5"
-TRAIN_INFORMATION = "info_testing.p"
+MODEL_PATH = "data/model.h5"
+TRAIN_INFORMATION = "data/info_testing.p"
 
 def pred2label(pred):
     """
