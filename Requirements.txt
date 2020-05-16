@@ -1,0 +1,7 @@
+jupyterlab
+tensorflow==2.0
+pandas
+matplotlib
+keras
+sklearn
+seqeval
