@@ -193,7 +193,7 @@ except Exception as error:
 
 logging.info("Preprocessing...")
 # Uncomment here to enable pre-processing
-data = pre_process(dataset)
+# data = pre_process(dataset, limit=5000)
 pickle.dump(data, open(PRE_PROCESSED_DATA, "wb"))
 
 data["POS"] = "None"
@@ -224,7 +224,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=TRAIN_TEST_S
 
 model = create_model()
 model = train_model(model, X_train, y_train)
-model = load_model(MODEL_PATH)
 
 idx2tag = {i: w for w, i in tag2idx.items()}
 
@@ -241,4 +240,5 @@ pickle.dump(info_testing, open(TRAIN_INFORMATION, "wb"))
 test_pred = model.predict(X_test, verbose=1)
 pred_labels = pred2label(test_pred, idx2tag)
 test_labels = pred2label(y_test, idx2tag)
-logging.info("F1-score: {:.1%}".format(f1_score(test_labels, pred_labels)))
+
+print("F1-score: {:.1%}".format(f1_score(test_labels, pred_labels)))

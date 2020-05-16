@@ -6,19 +6,34 @@ Named Entity Recognition(NER) is used to find the Entity type of words. The sele
 PS: Some of the code submitted have been reused from the references mentioned below
 
 Steps to run : 
+1. Install Virtual Environment
 
-Training : 
+        pip install virtualenv
 
-    python train.py
+2. Create/Activate Virtual Environment:
+       
+        virtualenv venv
+        source venv/bin/activate
+        
+3. Install Requirements      
     
-Pre-processing - By default the pre-processing is disabled as it takes a lot of time, if you want to enable it please goto train.py and uncomment "data = pre_process(dataset)"
+        pip install -r Requirements.txt
+    
+4. Training : 
+
+        python train.py
+        
+     Pre-processing - By default the pre-processing is disabled as it takes a lot of time, if you want to enable it please goto train.py and uncomment 
+        
+        data = pre_process(dataset)
 
 
-Testing/Deployment: 
+5. Testing/Deployment: 
+            
+       python test.py
 
-    python test.py
 
-All the global variables are present in the top of the file.
+All the CONFIG parameters are present in the top of the file.
 
 Requirements:
 Please look at Requirements.txt
@@ -26,9 +41,9 @@ Please look at Requirements.txt
 
 Evaluation:
     
-    F1 Score: 
-    Training Score: 
-    Testing Score: 
+    F1 Score: 94
+    Training accuracy: 0.9972
+    Testing accuracy: 0.9960
 
 References : 
 
