@@ -50,6 +50,7 @@ while True:
         print ("Enter sentence for NER..")
         sentence = raw_input()
         for word in sentence.split(" "):
+            word = word.lower()
             if word2idx.get(word) is None:
                 print("Word not found ", word)
                 print("Try again..")
@@ -57,7 +58,7 @@ while True:
 
         else:
 
-            test_x = [[word2idx[w] for w in sentence.split(" ")]]
+            test_x = [[word2idx[w.lower()] for w in sentence.split(" ")]]
             test_x = pad_sequences(maxlen=max_len, sequences=test_x, padding="post", value=n_words - 1)
 
             result = model.predict(np.array([test_x[0]]))
