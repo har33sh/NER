@@ -23,7 +23,7 @@ Steps to run :
 
         python train.py
         
-     Pre-processing - By default the pre-processing is disabled as it takes a lot of time, if you want to enable it please goto train.py and uncomment 
+     Pre-processing - By default the pre-processing is disabled as it takes a lot of time, if you want to enable it please goto train.py and uncomment (line 196)
         
         data = pre_process(dataset)
 
@@ -41,9 +41,9 @@ Please look at Requirements.txt
 
 Evaluation:
     
-    F1 Score: 94
-    Training accuracy: 0.9972
-    Testing accuracy: 0.9960
+    F1 Score: 96.4%
+    Training accuracy: 0.9992
+    Testing accuracy: 0.9991
 
 References : 
 

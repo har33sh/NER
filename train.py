@@ -193,8 +193,8 @@ except Exception as error:
 
 logging.info("Preprocessing...")
 # Uncomment here to enable pre-processing
-data = pre_process(dataset, limit=5000)
-pickle.dump(data, open(PRE_PROCESSED_DATA, "wb"))
+# data = pre_process(dataset)
+# pickle.dump(data, open(PRE_PROCESSED_DATA, "wb"))
 
 data["POS"] = "None"
 words, tags = get_words_tags(data)
