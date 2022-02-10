@@ -1,5 +1,5 @@
 jupyterlab
-tensorflow==2.0
+tensorflow==2.5.3
 pandas
 matplotlib
 keras
